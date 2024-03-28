@@ -52,7 +52,7 @@ jobs:
 
       - name: AKS Monitroing Enabler
         run: |
-          az aks get-credentials -n "aks_terraform" -g "aks_terraform_rg"
+          az aks get-credentials -n "terraform_aks" -g "aks_terraform_rg"
           helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
           helm repo update
           helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
